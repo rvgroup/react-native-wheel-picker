@@ -2,10 +2,10 @@
 
 import React from 'react';
 import PropTypes from 'prop-types'
-import {
-	ColorPropType,
+import {	
 	requireNativeComponent,
 } from 'react-native';
+import {ColorPropType} from 'deprecated-react-native-prop-types';
 
 const WheelCurvedPickerNativeInterface = {
 	name: 'WheelCurvedPicker',
