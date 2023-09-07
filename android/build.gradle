@@ -7,16 +7,25 @@ buildscript {
     dependencies {
         classpath 'com.android.tools.build:gradle:7.0.4'
     }
+
+    ext {
+        rnsmDefaultTargetSdkVersion = 31
+        rnsmDefaultCompileSdkVersion = 31
+        rnsmDefaultMinSdkVersion = 21
+    }
+    ext.safeExtGet = {prop, fallback ->
+        rootProject.ext.has(prop) ? rootProject.ext.get(prop) : fallback
+    }
 }
 
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 28
-    buildToolsVersion "28.0.3"
+    compileSdkVersion safeExtGet('compileSdkVersion', rnsmDefaultCompileSdkVersion)
+
     defaultConfig {
-        minSdkVersion rootProject.hasProperty('minSdkVersion') ? rootProject.minSdkVersion : 16
-        targetSdkVersion 28
+        minSdkVersion safeExtGet('minSdkVersion', rnsmDefaultCompileSdkVersion)
+        targetSdkVersion safeExtGet('targetSdkVersion', rnsmDefaultCompileSdkVersion)
         versionCode 1
         versionName "1.0"
         ndk {
