@@ -3,3 +3,7 @@ android/build
 android/.idea/workspace.xml
 android/.idea/copyright/profiles_settings.xml
 node_modules/
+
+/android/.gradle/
+/android/.idea
+/android/local.properties
