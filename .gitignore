@@ -7,3 +7,4 @@ node_modules/
 /android/.gradle/
 /android/.idea
 /android/local.properties
+/android/wheelpicker/build
