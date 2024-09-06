@@ -6,8 +6,6 @@ buildscript {
 
     dependencies {
         classpath 'com.android.tools.build:gradle:7.0.4'
-        //classpath "com.android.tools.build:gradle"
-        //classpath 'com.android.tools.build:gradle:4.2.2'
     }
 
     ext {
@@ -44,9 +42,7 @@ android {
 }
 
 dependencies {
-    //implementation fileTree(dir: 'libs', include: ['*.aar'])
     //implementation "cn.aigestudio.wheelpicker:WheelPicker:1.0.3"
-    implementation project(":wheelpicker")
 
     implementation 'com.facebook.react:react-native:+'
     //implementation('com.facebook.react:react-android:0.72.15')
